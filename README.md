@@ -1,11 +1,12 @@
 <h1 align="center">Citrea Trusted Setup Verification</h1>
 
-Citrea Risc0-to-BitVM Trusted Setup Ceremony başarıyla tamamlandı! Bu, BitVM’in Bitcoin üzerindeki ZK kanıtları için yapılan ilk trusted setup. Artık Clementine ve diğer BitVM projeleri ortak ve doğrulanabilir kriptografik parametreleri kullanabiliyor. Toplam 63 kişi katkıda bulundu ve tüm Clementine köprü imzalayıcıları da dahil edildi. Ekstra bir güven varsayımı eklenmedi.
+Citrea Risc0-to-BitVM Trusted Setup Ceremony başarıyla tamamlandı! Bu, BitVM’in Bitcoin üzerindeki ZK kanıtları için yapılan ilk trusted setup. Artık Clementine ve diğer BitVM projeleri ortak ve doğrulanabilir kriptografik parametreleri kullanabiliyor. Toplam 64 kişi katkıda bulundu ve tüm Clementine köprü imzalayıcıları da dahil edildi. Ekstra bir güven varsayımı eklenmedi.
 > Daha fazla bilgi için [tıklayınız.](https://dev.risczero.com/api/trusted-setup-ceremony)
 
 Aşağıdaki doğrulama, setup’la oynanmadığını ve Clementine’in tam olarak üretilen parametrelere baktığını görmek için önemli. 
 Devreyi tekrar derleyip, doğru Powers of Tau ve final zkey’i indirip transcript’i kontrol ederek, taahhütleri yeniden oluşturabilir ve yayımlanan parametreler ve doğrulama anahtarı hash’leri ile karşılaştırabilirsiniz.
 
+NOT: Daha basit bir deyişle; bu bir katılım değil, doğrulamadır. 
 
 <h2 align="center">Sistem Gereksinimleri</h1>
 
@@ -115,6 +116,8 @@ export NODE_OPTIONS="--max-old-space-size=32768"
 snarkjs zkey verify verify_for_guest.r1cs ppot_0080_23.ptau verify_for_guest_final.zkey
 ```
 
-> Sonucu Citrea'nın eş kurucusu [Ekrem Bal'ın](https://x.com/ekrembal) paylaşımı ile [karşılaştırabilirsiniz](https://gist.github.com/ekrembal/527f44c91736a511f6bfd61e01bc4f22)
-> Bireysel attestasyonları buradan kontrol edebilirsiniz:
-> Başarılar...
+> Seremoni'nin doğruluğunu teyit etmek için çıkan sonucu [karşılaştırabilirsiniz](https://gist.github.com/ekrembal/527f44c91736a511f6bfd61e01bc4f22)
+
+
+
+https://github.com/user-attachments/assets/2adfdead-9286-487d-8253-b120d75ea118
