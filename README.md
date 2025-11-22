@@ -10,7 +10,32 @@ Devreyi tekrar derleyip, doğru Powers of Tau ve final zkey’i indirip transcri
 <h2 align="center">Sistem Gereksinimleri</h1>
 
 ```
-> minimum 64 gb ram önerilir.
+> min 64 gb ram önerilir.
+> Eğer sadece 32gb ram erişiminiz varsa; SWAP SPACE kodu ile başlayın. Swap space ile ilgili bilginiz yoksa önce videonun tamamını izlemelisiniz. 32gb'dan fazla rame sahipseniz bu adımı atlayın. 
+```
+
+<h2 align="center">SWAP SPACE</h1>
+Eğer 32gb'dan fazla ram'iniz varsa bu adımı atlayıp doğrudan "Circom & SnarkJS Kurulumu" adımına geçin. Yoksa, aşağıdaki adımları takip edin.
+Aşağıdaki komutlar, sunucunuzun SSD alanından çalarak geçici, 32gb'lık ram alanı ekleyecek. Bunu diğer nodelarınızda vs. kullanmanızı önermem, işlevsel bir alan değil.
+
+```
+sudo swapoff -a
+```
+```
+sudo fallocate -l 32768M /swapfile
+```
+
+## İzinleri ayarlayalım
+```
+sudo chmod 600 /swapfile
+```
+## Sisteme ekleyelim
+```
+sudo mkswap /swapfile
+```
+## Aktifleştirelim
+```
+sudo swapon /swapfile
 ```
 
 <h2 align="center">Circom & SnarkJS Kurulumu</h1>
@@ -20,7 +45,7 @@ Devreyi tekrar derleyip, doğru Powers of Tau ve final zkey’i indirip transcri
 sudo apt-get update
 sudo apt-get install -y build-essential git npm
 
-# Rust (circom derlemek için)
+# Rust (circom derlemek için) > Topluca girip soru geldiğinde enter'a basın.
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 . "$HOME/.cargo/env"
 
